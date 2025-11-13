@@ -10,9 +10,21 @@
             background: #fff;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             font-family: Arial, sans-serif;
             position: relative;
+        }
+        .logo-header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 32px;
+            margin-bottom: 10px;
+        }
+        .logo-header img {
+            max-width: 260px;
+            height: auto;
+            display: block;
         }
         .rectangles-container {
             display: flex;
@@ -22,7 +34,7 @@
             flex-grow: 1;
             min-height: 70vh;
             gap: 3vw;
-            padding-top: 12vh;
+            padding-top: 4vh;
         }
         .rectangle {
             background: #fff;
@@ -70,6 +82,9 @@
                 width: 160px;
                 height: 260px;
             }
+            .logo-header img {
+                max-width: 180px;
+            }
         }
         @media (max-width: 850px) {
             .rectangles-container {
@@ -79,6 +94,9 @@
             .rectangle {
                 width: 110px;
                 height: 180px;
+            }
+            .logo-header img {
+                max-width: 120px;
             }
         }
         @media (max-width: 500px) {
@@ -94,10 +112,16 @@
                 font-size: 1.1rem;
                 padding: 0.2em 1em;
             }
+            .logo-header img {
+                max-width: 80px;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="logo-header">
+        <img src="terrificer logo.png" alt="Terrificer Logo">
+    </div>
     <div class="rectangles-container">
         <div class="rectangle">
             <img src="terrificer logo.png" alt="terrificer logo">
