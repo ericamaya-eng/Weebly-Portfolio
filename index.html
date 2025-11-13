@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+        .rectangles-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            min-height: 70vh;
+            gap: 3vw;
+            padding-top: 12vh;
+        }
+        .rectangle {
+            background: #000;
+            width: 120px;
+            height: 180px;
+            border-radius: 8px;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .about-wrapper {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 2vw;
+            width: 100%;
+            text-align: center;
+            z-index: 10;
+            pointer-events: none;
+        }
+        .about-label {
+            color: #000;
+            font-size: 1.7rem;
+            font-weight: bold;
+            letter-spacing: .4em;
+            background: rgba(255,255,255,0.85);
+            display: inline-block;
+            padding: 0.3em 1.5em;
+            border-radius: 10px;
+            pointer-events: none;
+            user-select: none;
+        }
+        @media (max-width: 850px) {
+            .rectangles-container {
+                flex-wrap: wrap;
+                gap: 5vw;
+            }
+            .rectangle {
+                width: 80px;
+                height: 120px;
+            }
+        }
+        @media (max-width: 500px) {
+            .rectangles-container {
+                gap: 4vw;
+                padding-top: 10vw;
+            }
+            .rectangle {
+                width: 50px;
+                height: 70px;
+            }
+            .about-label {
+                font-size: 1.1rem;
+                padding: 0.2em 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="rectangles-container">
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+    </div>
+    <div class="about-wrapper">
+        <div class="about-label">ABOUT</div>
+    </div>
+</body>
+</html>
