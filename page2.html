@@ -2,15 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Page 2</title>
+  <title>Glitch | Page 2</title>
   <style>
-    body { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 97vh; margin:0; }
-    h1 { font-size: 2.5em; }
-    a { color: #222; font-size: 1.1em; margin-top: 2em; }
+    body { margin:0; padding:0; height:100vh; }
+    .main-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      box-sizing: border-box;
+      gap: 4vw;
+      padding: 0 5vw;
+    }
+    .logo-side {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 350px;
+      width: 350px;
+    }
+    .logo-side img {
+      width: 100%;
+      height: auto;
+      max-width: 320px;
+      max-height: 320px;
+      display: block;
+      border-radius: 16px;
+      border: 3px solid #111;
+      background: #fff;
+    }
+    .text-side {
+      flex: 1 1 0;
+      max-width: 600px;
+    }
+    .label {
+      font-size: 1.6em;
+      font-weight: bold;
+      letter-spacing: 0.06em;
+      color: #0a0a0a;
+      margin-bottom: 0.7em;
+      margin-top: 0.7em;
+      font-family: Arial,sans-serif;
+    }
+    .desc {
+      font-size: 1.12em;
+      line-height: 1.55em;
+      color: #232323;
+      font-family: Arial, sans-serif;
+      background: #fbfbff;
+      border-radius: 9px;
+      padding: 1.2em 1.3em;
+      border: 1.5px solid #eaeaea;
+      box-shadow: 0 1px 12px rgba(0,0,0,0.03);
+    }
+    @media (max-width: 950px) {
+      .main-content { flex-direction: column; height:auto; padding-top:35px; }
+      .logo-side { justify-content: center; width: 100%; }
+      .text-side { max-width: 93vw; }
+    }
+    @media (max-width: 600px) {
+      .main-content { gap: 20px; padding: 18px 2vw; }
+      .logo-side, .logo-side img { max-width: 92vw; height:auto; min-width:0; }
+      .text-side {padding-bottom:1em;}
+    }
+    .home-link { position: fixed; top: 18px; left: 28px; font-size:1.13em; color:#111; text-decoration:none; padding:8px 18px;background:rgba(255,255,255,0.75);border-radius:6px; font-weight:500; border:1.2px solid #ccc; }
+    .home-link:hover { background:#eef; color:#284393; border-color:#aad;}
   </style>
 </head>
 <body>
-  <h1>Page 2</h1>
-  <a href="index.html">&larr; Go back to Home</a>
+  <a class="home-link" href="index.html">&larr; Go back to Home</a>
+  <div class="main-content">
+    <div class="logo-side">
+      <img src="monkey thought.jpg" alt="monkey thought glitch image">
+    </div>
+    <div class="text-side">
+      <div class="label">Glitch</div>
+      <div class="desc">
+        A glitched image of a monkey doing a human-like pose. The glitch plays on the idea of having staggered effects of the image being chopped up and moved around like a video with its framerate desynced. The image is glitched because it's had it's code dysfunctionalized.
+      </div>
+    </div>
+  </div>
 </body>
 </html>
